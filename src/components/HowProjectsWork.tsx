@@ -23,7 +23,9 @@ export default function HowProjectsWork() {
 
   const steps = [
     t.step1, t.step2, t.step3, t.step4, t.step5, t.step6, t.step7, t.step8, t.step9,
-  ];  const colors = [
+  ];
+
+  const colors = [
     "from-kz-blue/40 to-kz-navy",
     "from-kz-green/20 to-kz-navy",
     "from-kz-blue/30 to-kz-navy",
