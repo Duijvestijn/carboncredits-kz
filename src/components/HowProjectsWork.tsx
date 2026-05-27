@@ -23,10 +23,7 @@ export default function HowProjectsWork() {
 
   const steps = [
     t.step1, t.step2, t.step3, t.step4, t.step5, t.step6, t.step7, t.step8, t.step9,
-  ];
-
-  const icons = ["ðŸ”", "ðŸ“Š", "ðŸ¤", "ðŸ“‹", "ðŸŒ±", "ðŸ“¡", "âœ…", "ðŸª™", "ðŸ’°"];
-  const colors = [
+  ];  const colors = [
     "from-kz-blue/40 to-kz-navy",
     "from-kz-green/20 to-kz-navy",
     "from-kz-blue/30 to-kz-navy",
@@ -90,7 +87,6 @@ export default function HowProjectsWork() {
               {/* Step number */}
               <div className="flex items-center gap-3 mb-4">
                 <span className="font-serif text-4xl font-bold text-kz-gold/15 leading-none">{step.n}</span>
-                <span className="text-xl">{icons[i]}</span>
               </div>
               {/* Title */}
               <h3 className="font-serif text-base font-bold text-white mb-2 group-hover:text-kz-gold transition-colors">
@@ -102,7 +98,7 @@ export default function HowProjectsWork() {
               {/* Arrow connector for non-last items */}
               {i < steps.length - 1 && (
                 <div className="absolute -right-2 top-1/2 -translate-y-1/2 text-kz-gold/20 text-xl hidden lg:block">
-                  â†’
+                  →
                 </div>
               )}
             </motion.div>
@@ -115,8 +111,8 @@ export default function HowProjectsWork() {
             href="#contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-kz-gold hover:bg-kz-gold-light text-kz-dark font-bold rounded-xl transition-colors"
           >
-            {lang === "kk" ? "Ð–Ð¾Ð±Ð°Ð½Ñ‹ Ð±Ð°ÑÑ‚Ð°Ñƒ" : lang === "ru" ? "ÐÐ°Ñ‡Ð°Ñ‚ÑŒ Ð¿Ñ€Ð¾ÐµÐºÑ‚" : "Start a Project"}
-            <span>â†’</span>
+            {lang === "kk" ? "Жобаны бастау" : lang === "ru" ? "Начать проект" : "Start a Project"}
+            <span>→</span>
           </a>
         </div>
       </div>

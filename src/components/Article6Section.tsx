@@ -89,7 +89,13 @@ export default function Article6Section() {
             animate={isContentInView ? "visible" : "hidden"}
             className="md:col-span-1 p-7 rounded-3xl bg-kz-blue/30 border border-kz-sky/20"
           >
-            <div className="text-3xl mb-4">ðŸŽ¯</div>
+            <div className="w-10 h-10 mb-4 text-kz-sky/70">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <circle cx="12" cy="12" r="6" />
+                <circle cx="12" cy="12" r="2" />
+              </svg>
+            </div>
             <h3 className="font-serif text-lg font-bold text-white mb-3">{t.ndcTitle}</h3>
             <p className="text-kz-sand/55 text-sm leading-relaxed">{t.ndcDesc}</p>
           </motion.div>
@@ -107,8 +113,8 @@ export default function Article6Section() {
             <h3 className="font-serif text-lg font-bold text-white mb-3">{t.art61Title}</h3>
             <p className="text-kz-sand/55 text-sm leading-relaxed">{t.art61Desc}</p>
             <div className="mt-4 flex items-center gap-2 text-xs text-kz-green-light">
-              <span>ðŸ¤</span>
-              <span>{lang === "kk" ? "Ð•ÐºÑ–Ð¶Ð°Ò›Ñ‚Ñ‹ Ð¼ÐµÑ…Ð°Ð½Ð¸Ð·Ð¼" : lang === "ru" ? "Ð”Ð²ÑƒÑÑ‚Ð¾Ñ€Ð¾Ð½Ð½Ð¸Ð¹ Ð¼ÐµÑ…Ð°Ð½Ð¸Ð·Ð¼" : "Bilateral mechanism"}</span>
+              <span className="w-px h-3 bg-kz-green-light/40 flex-shrink-0" />
+              <span>{lang === "kk" ? "Екіжақты механизм" : lang === "ru" ? "Двусторонний механизм" : "Bilateral mechanism"}</span>
             </div>
           </motion.div>
 
@@ -125,7 +131,7 @@ export default function Article6Section() {
             <h3 className="font-serif text-lg font-bold text-white mb-3">{t.art62Title}</h3>
             <p className="text-kz-sand/55 text-sm leading-relaxed">{t.art62Desc}</p>
             <div className="mt-4 flex items-center gap-2 text-xs text-kz-gold">
-              <span>ðŸŒ</span>
+              
               <span>{lang === "kk" ? "Ð‘Ò°Ò° Ð±Ð°Ò›Ñ‹Ð»Ð°ÑƒÑ‹" : lang === "ru" ? "ÐŸÐ¾Ð´ ÐºÐ¾Ð½Ñ‚Ñ€Ð¾Ð»ÐµÐ¼ ÐžÐžÐ" : "UN supervised"}</span>
             </div>
           </motion.div>
@@ -136,25 +142,25 @@ export default function Article6Section() {
           <h3 className="font-serif text-xl text-white font-bold mb-8 text-center">{t.art6Title}</h3>
           <div className="flex flex-wrap justify-center items-center gap-3 md:gap-0">
             {[
-              { label: lang === "kk" ? "Ð–Ð¾Ð±Ð° ÐµÐ»" : lang === "ru" ? "Ð¡Ñ‚Ñ€Ð°Ð½Ð°-Ñ…Ð¾Ð·ÑÐ¸Ð½" : "Host Country", icon: "ðŸŒ¾" },
-              { label: "â†’", icon: null },
-              { label: lang === "kk" ? "Ð–Ð¾Ð±Ð° Ñ–ÑÐºÐµ Ð°ÑÑ‹Ñ€Ñƒ" : lang === "ru" ? "Ð ÐµÐ°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ñ Ð¿Ñ€Ð¾ÐµÐºÑ‚Ð°" : "Project Implemented", icon: "ðŸŒ±" },
-              { label: "â†’", icon: null },
-              { label: "Verra / GS", icon: "âœ…" },
-              { label: "â†’", icon: null },
-              { label: lang === "kk" ? "ÐÐµÑÐ¸ÐµÐ»ÐµÑ€ ÑÐ°Ñ‚Ñ‹Ð»Ð°Ð´Ñ‹" : lang === "ru" ? "ÐšÑ€ÐµÐ´Ð¸Ñ‚Ñ‹ Ð¿Ñ€Ð¾Ð´Ð°Ð½Ñ‹" : "Credits Sold", icon: "ðŸ’°" },
-              { label: "â†’", icon: null },
-              { label: lang === "kk" ? "NDC Ð¼Ð°Ò›ÑÐ°Ñ‚Ñ‚Ð°Ñ€Ñ‹" : lang === "ru" ? "Ð¦ÐµÐ»Ð¸ NDC" : "NDC Targets", icon: "ðŸŽ¯" },
+              { label: lang === "kk" ? "Жоба ел" : lang === "ru" ? "Страна-хозяин" : "Host Country", code: "KZ" },
+              { label: "→", code: null },
+              { label: lang === "kk" ? "Жоба іске асыру" : lang === "ru" ? "Реализация проекта" : "Project Implemented", code: "PR" },
+              { label: "→", code: null },
+              { label: "Verra / GS", code: "VS" },
+              { label: "→", code: null },
+              { label: lang === "kk" ? "Несиелер сатылады" : lang === "ru" ? "Кредиты проданы" : "Credits Sold", code: "CR" },
+              { label: "→", code: null },
+              { label: lang === "kk" ? "NDC мақсаттары" : lang === "ru" ? "Цели NDC" : "NDC Targets", code: "ND" },
             ].map((item, i) =>
-              item.icon ? (
+              item.code ? (
                 <div key={i} className="flex flex-col items-center gap-2 px-3">
-                  <div className="w-12 h-12 rounded-full bg-kz-dark/70 border border-kz-gold/15 flex items-center justify-center text-lg">
-                    {item.icon}
+                  <div className="w-12 h-12 rounded-full bg-kz-dark/70 border border-kz-gold/15 flex items-center justify-center">
+                    <span className="text-[10px] font-mono font-bold text-kz-gold/70">{item.code}</span>
                   </div>
                   <span className="text-kz-sand/50 text-[10px] text-center max-w-16 leading-tight">{item.label}</span>
                 </div>
               ) : (
-                <div key={i} className="text-kz-gold/30 text-xl font-light hidden md:block">â†’</div>
+                <div key={i} className="text-kz-gold/30 text-xl font-light hidden md:block">→</div>
               )
             )}
           </div>

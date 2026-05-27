@@ -35,12 +35,12 @@ export default function WhyKazakhstan() {
   const isAdvantagesInView = useInView(advantagesRef, { once: true, margin: "-60px" });
 
   const advantages = [
-    { title: t.advantage1Title, desc: t.advantage1Desc, icon: "ðŸŒ¾" },
-    { title: t.advantage2Title, desc: t.advantage2Desc, icon: "ðŸ›ï¸" },
-    { title: t.advantage3Title, desc: t.advantage3Desc, icon: "ðŸŒ" },
-    { title: t.advantage4Title, desc: t.advantage4Desc, icon: "ðŸ’§" },
-    { title: t.advantage5Title, desc: t.advantage5Desc, icon: "ðŸŒ±" },
-    { title: t.advantage6Title, desc: t.advantage6Desc, icon: "âš¡" },
+    { title: t.advantage1Title, desc: t.advantage1Desc, code: "ST" },
+    { title: t.advantage2Title, desc: t.advantage2Desc, code: "PL" },
+    { title: t.advantage3Title, desc: t.advantage3Desc, code: "GE" },
+    { title: t.advantage4Title, desc: t.advantage4Desc, code: "WR" },
+    { title: t.advantage5Title, desc: t.advantage5Desc, code: "AG" },
+    { title: t.advantage6Title, desc: t.advantage6Desc, code: "RE" },
   ];
 
   const stats = [
@@ -170,7 +170,7 @@ export default function WhyKazakhstan() {
               {/* Scale info */}
               <div className="absolute bottom-4 left-4 right-4 flex items-center gap-2">
                 <div className="w-12 h-px bg-kz-gold/40" />
-                <span className="text-kz-sand/30 text-[10px]">2.7M kmÂ² â€” 9th largest country</span>
+                <span className="text-kz-sand/30 text-[10px]">2.7M km² — 9th largest country</span>
               </div>
             </div>
           </div>
@@ -178,7 +178,7 @@ export default function WhyKazakhstan() {
           {/* Advantages grid */}
           <div ref={advantagesRef}>
             <h3 className="font-serif text-2xl text-white font-bold mb-6">
-              {lang === "kk" ? "Ð‘Ñ–Ñ€ÐµÐ³ÐµÐ¹ Ð°Ñ€Ñ‚Ñ‹Ò›ÑˆÑ‹Ð»Ñ‹Ò›Ñ‚Ð°Ñ€" : lang === "ru" ? "Ð£Ð½Ð¸ÐºÐ°Ð»ÑŒÐ½Ñ‹Ðµ Ð¿Ñ€ÐµÐ¸Ð¼ÑƒÑ‰ÐµÑÑ‚Ð²Ð°" : "Unique Advantages"}
+              {lang === "kk" ? "Бірегей артықшылықтар" : lang === "ru" ? "Уникальные преимущества" : "Unique Advantages"}
             </h3>
             <div className="space-y-4">
               {advantages.map((adv, i) => (
@@ -189,7 +189,7 @@ export default function WhyKazakhstan() {
                   animate={isAdvantagesInView ? "visible" : "hidden"}
                   className="flex gap-4 p-5 rounded-2xl bg-kz-dark/50 border border-white/[0.05] hover:border-kz-gold/20 transition-all hover:bg-kz-dark/70 group"
                 >
-                  <span className="text-xl flex-shrink-0 mt-0.5">{adv.icon}</span>
+                  <span className="text-[10px] font-mono font-bold text-kz-gold/70 border border-kz-gold/20 px-1.5 py-0.5 rounded flex-shrink-0 mt-1">{adv.code}</span>
                   <div>
                     <h4 className="text-white font-semibold text-sm mb-1 group-hover:text-kz-gold transition-colors">{adv.title}</h4>
                     <p className="text-kz-sand/45 text-xs leading-relaxed">{adv.desc}</p>

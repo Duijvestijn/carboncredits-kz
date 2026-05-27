@@ -203,7 +203,7 @@ export default function ContactSection() {
                     onChange={(e) => setType(e.target.value)}
                     className={`${INPUT_CLASS} cursor-pointer`}
                   >
-                    <option value="" style={{ background: "#0B1929" }}>â€”</option>
+                    <option value="" style={{ background: "#0B1929" }}>—</option>
                     {f.types.map((tp) => (
                       <option key={tp} value={tp} style={{ background: "#0B1929" }}>{tp}</option>
                     ))}

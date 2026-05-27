@@ -11,13 +11,7 @@ const FADE_UP = (delay = 0) => ({
   visible: { opacity: 1, y: 0, transition: { delay, duration: 0.6, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] } },
 });
 
-const FLOW_STEPS = [
-  { icon: "ðŸŒ", color: "kz-green" },
-  { icon: "ðŸ“‹", color: "kz-blue" },
-  { icon: "âœ…", color: "kz-gold" },
-  { icon: "ðŸŒ", color: "kz-mist" },
-  { icon: "ðŸ”„", color: "kz-green" },
-];
+const ROMAN = ["I", "II", "III", "IV", "V"];
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
@@ -86,7 +80,7 @@ export default function WhatAreCredits() {
           </motion.p>
         </div>
 
-        {/* How it works â€” flow diagram */}
+        {/* How it works — flow diagram */}
         <div ref={stepsRef} className="mb-24">
           <motion.h3
             variants={FADE_UP(0)}
@@ -103,7 +97,6 @@ export default function WhatAreCredits() {
 
             <div className="space-y-0">
               {steps.map((step, i) => {
-                const flowStep = FLOW_STEPS[i];
                 return (
                   <motion.div
                     key={i}
@@ -115,7 +108,7 @@ export default function WhatAreCredits() {
                     {/* Icon circle */}
                     <div className="flex-shrink-0 relative">
                       <div className="w-12 h-12 rounded-full bg-kz-navy border border-kz-gold/20 flex items-center justify-center group-hover:border-kz-gold/50 transition-colors z-10 relative">
-                        <span className="text-lg">{flowStep.icon}</span>
+                        <span className="text-xs font-serif font-bold text-kz-gold/80">{ROMAN[i]}</span>
                       </div>
                     </div>
                     {/* Content */}
@@ -158,15 +151,15 @@ export default function WhatAreCredits() {
             <p className="text-kz-sand/60 leading-relaxed mb-4">{t.whyDesc}</p>
             {/* Visual accent */}
             <div className="flex items-center gap-3 mt-6">
-              <div className="flex -space-x-1">
-                {["ðŸŒ±", "ðŸ’°", "ðŸŒ"].map((emoji) => (
-                  <div key={emoji} className="w-8 h-8 rounded-full bg-kz-navy border border-kz-gold/20 flex items-center justify-center text-sm">
-                    {emoji}
-                  </div>
+              <div className="flex gap-1.5 items-center">
+                <div className="w-2.5 h-2.5 rounded-full bg-kz-green-light/70" />
+                <div className="w-2.5 h-2.5 rounded-full bg-kz-gold/70" />
+                <div className="w-2.5 h-2.5 rounded-full bg-kz-sky/70" />
+              </div>
                 ))}
               </div>
               <div className="w-px h-6 bg-kz-gold/20" />
-              <span className="text-kz-gold text-sm font-medium">Nature Ã— Finance</span>
+              <span className="text-kz-gold text-sm font-medium">Nature × Finance</span>
             </div>
           </div>
         </div>
@@ -181,7 +174,7 @@ export default function WhatAreCredits() {
           <div className="absolute inset-0 flex items-center px-10">
             <div className="max-w-lg">
               <p className="font-serif text-2xl md:text-3xl italic text-white leading-snug">
-                "Land transformed into living, breathing financial assets â€” while nature recovers."
+                "Land transformed into living, breathing financial assets — while nature recovers."
               </p>
             </div>
           </div>

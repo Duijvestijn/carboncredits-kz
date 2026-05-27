@@ -89,7 +89,7 @@ export default function NewsSection() {
                   </h3>
                   <p className="text-kz-sand/45 text-sm leading-relaxed mb-4">{item.excerpt}</p>
                   <span className="text-kz-gold/60 text-xs font-medium group-hover:text-kz-gold transition-colors">
-                    {t.readMore} â†’
+                    {t.readMore} →
                   </span>
                 </div>
               </motion.article>

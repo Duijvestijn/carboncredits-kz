@@ -133,7 +133,11 @@ export default function InvestmentSection() {
             <div className="space-y-3">
               {buyers.map((buyer, i) => (
                 <div key={i} className="flex items-start gap-3 p-4 rounded-xl bg-kz-navy border border-white/[0.05]">
-                  <span className="text-kz-gold text-sm flex-shrink-0 mt-0.5">âœ“</span>
+                  <span className="flex-shrink-0 mt-0.5 w-4 h-4 text-kz-gold">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                  </span>
                   <span className="text-kz-sand/60 text-sm">{buyer}</span>
                 </div>
               ))}

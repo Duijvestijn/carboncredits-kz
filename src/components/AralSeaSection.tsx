@@ -90,7 +90,7 @@ export default function AralSeaSection() {
           <p className="text-kz-sand/65 text-lg leading-relaxed">{t.intro}</p>
         </div>
 
-        {/* Verra registration â€” FLAGSHIP CALLOUT */}
+        {/* Verra registration — FLAGSHIP CALLOUT */}
         <div
           ref={verraRef}
           className="relative rounded-3xl overflow-hidden mb-16"
@@ -145,12 +145,17 @@ export default function AralSeaSection() {
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {/* Saxaul info */}
           <div className="p-8 rounded-3xl bg-kz-green/[0.08] border border-kz-green/20">
-            <div className="text-3xl mb-4">ðŸŒ¿</div>
+            <div className="w-10 h-10 mb-4 text-kz-green-light/70">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z" />
+                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+              </svg>
+            </div>
             <h3 className="font-serif text-xl font-bold text-white mb-3">{t.saxaulTitle}</h3>
             <p className="text-kz-sand/60 text-sm leading-relaxed">{t.saxaulDesc}</p>
             <div className="mt-4 flex items-center gap-2">
               <span className="text-xs text-kz-green-light font-medium font-mono">Haloxylon ammodendron</span>
-              <span className="text-kz-sand/20">Â·</span>
+              <span className="text-kz-sand/20">·</span>
               <span className="text-xs text-kz-sand/40">IUCN recognized</span>
             </div>
           </div>
@@ -202,7 +207,7 @@ export default function AralSeaSection() {
           <div className="absolute inset-0 bg-gradient-to-r from-kz-dark/85 to-kz-dark/30" />
           <div className="absolute inset-0 flex items-center px-10">
             <blockquote className="font-serif text-xl md:text-2xl italic text-white max-w-xl leading-relaxed">
-              "Restoring the Aral Sea is not just an ecological mission â€” it is a model for how nature finance can heal the world's most damaged landscapes."
+              "Restoring the Aral Sea is not just an ecological mission — it is a model for how nature finance can heal the world's most damaged landscapes."
             </blockquote>
           </div>
         </div>
