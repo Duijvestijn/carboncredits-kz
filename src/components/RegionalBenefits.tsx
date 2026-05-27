@@ -67,7 +67,9 @@ export default function RegionalBenefits() {
               animate={isGridInView ? "visible" : "hidden"}
               className="p-6 rounded-3xl bg-kz-dark/50 border border-white/[0.05] hover:border-kz-gold/20 hover:bg-kz-dark/70 transition-all group"
             >
-              <div className="text-2xl mb-4">{item.icon}</div>
+              <div className="text-[10px] font-mono font-bold tracking-[0.2em] text-kz-gold/60 mb-4">
+                {String(i + 1).padStart(2, "0")}
+              </div>
               <h3 className="font-serif text-base font-bold text-white mb-2 group-hover:text-kz-gold transition-colors">
                 {item.title}
               </h3>
@@ -87,10 +89,10 @@ export default function RegionalBenefits() {
             <div className="max-w-lg">
               <p className="font-serif text-xl md:text-2xl italic text-white leading-snug mb-3">
                 {lang === "kk"
-                  ? '"ÐšÐ°Ñ€Ð±Ð¾Ð½ Ð¶Ð¾Ð±Ð°Ð»Ð°Ñ€Ñ‹ â€” Ð±Ò±Ð» Ð¶Ð°Ð¹ ÑÐºÐ¾Ð»Ð¾Ð³Ð¸Ñ ÐµÐ¼ÐµÑ. Ð‘Ò±Ð» Ð°ÑƒÑ‹Ð»Ð´Ñ‹Ò› Ð°Ð¹Ð¼Ð°Ò›Ñ‚Ð°Ñ€Ð´Ñ‹Ò£ ÑÐºÐ¾Ð½Ð¾Ð¼Ð¸ÐºÐ°Ð»Ñ‹Ò› Ñ‚Ñ€Ð°Ð½ÑÑ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÑÑÑ‹."'
+                  ? '“Карбон жобалары – бұл жай экология емес. Бұл ауылдық аймақтардың экономикалық трансформациясы.”'
                   : lang === "ru"
-                  ? '"ÐšÐ°Ñ€Ð±Ð¾Ð½Ð¾Ð²Ñ‹Ðµ Ð¿Ñ€Ð¾ÐµÐºÑ‚Ñ‹ â€” ÑÑ‚Ð¾ Ð½Ðµ Ð¿Ñ€Ð¾ÑÑ‚Ð¾ ÑÐºÐ¾Ð»Ð¾Ð³Ð¸Ñ. Ð­Ñ‚Ð¾ ÑÐºÐ¾Ð½Ð¾Ð¼Ð¸Ñ‡ÐµÑÐºÐ°Ñ Ñ‚Ñ€Ð°Ð½ÑÑ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ñ ÑÐµÐ»ÑŒÑÐºÐ¸Ñ… Ñ€ÐµÐ³Ð¸Ð¾Ð½Ð¾Ð²."'
-                  : '"Carbon projects are not just ecology. They are the economic transformation of rural regions."'}
+                  ? '“Карбоновые проекты – это не просто экология. Это экономическая трансформация сельских регионов.”'
+                  : '"Carbon finance projects are not merely ecological. They are the economic transformation of rural regions."'}
               </p>
             </div>
           </div>

@@ -10,6 +10,17 @@ const FADE_UP = (delay = 0) => ({
   visible: { opacity: 1, y: 0, transition: { delay, duration: 0.65, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] } },
 });
 
+const CATEGORY_CODES: Record<string, string> = {
+  afforestation: "AF",
+  steppe: "SR",
+  agriculture: "RA",
+  soil: "SE",
+  water: "WR",
+  biodiversity: "BD",
+  renewable: "RE",
+  agroforestry: "AGF",
+};
+
 export default function ProjectTypes() {
   const { lang } = useLang();
   const t = translations.projectTypes[lang];
@@ -65,9 +76,11 @@ export default function ProjectTypes() {
                 onClick={() => setOpenId(isOpen ? null : type.id)}
               >
                 <div className="p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-2xl">{type.icon}</span>
-                    <span className={`text-kz-gold/40 transition-transform text-lg ${isOpen ? "rotate-45" : ""}`}>+</span>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-[10px] font-mono font-bold tracking-[0.2em] text-kz-gold/70 border border-kz-gold/20 px-2 py-1 rounded">
+                      {CATEGORY_CODES[type.id] ?? type.id.toUpperCase().slice(0, 3)}
+                    </span>
+                    <span className={`text-kz-gold/40 transition-transform text-lg leading-none ${isOpen ? "rotate-45" : ""}`}>+</span>
                   </div>
                   <h3 className="font-serif text-base font-bold text-white mb-2">{type.title}</h3>
                   <p className="text-kz-sand/45 text-xs leading-relaxed line-clamp-2">{type.desc}</p>
@@ -96,7 +109,7 @@ export default function ProjectTypes() {
                             onClick={(e) => e.stopPropagation()}
                             className="inline-flex items-center gap-1.5 text-xs text-kz-gold hover:text-kz-gold-light transition-colors font-medium"
                           >
-                            {lang === "kk" ? "Ð¢Ð¾Ð»Ñ‹Ò“Ñ‹Ñ€Ð°Ò› Ð±Ñ–Ð»Ñ–Ò£Ñ–Ð·" : lang === "ru" ? "Ð£Ð·Ð½Ð°Ñ‚ÑŒ Ð¿Ð¾Ð´Ñ€Ð¾Ð±Ð½ÐµÐµ" : "Learn more"} â†’
+                            {lang === "kk" ? "Толығырақ біліңіз" : lang === "ru" ? "Узнать подробнее" : "Learn more"}
                           </a>
                         </div>
                       </motion.div>
