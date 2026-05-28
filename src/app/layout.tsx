@@ -9,8 +9,8 @@ const orgJsonLd = {
   "@type": "Organization",
   name: "CarbonCredits.kz",
   alternateName: [
-    "Карбон несиелері Қазақстан",
-    "Карбоновые кредиты Казахстан",
+    "Көміртегі бірліктері Қазақстан",
+    "Углеродные единицы Казахстан",
   ],
   url: "https://carboncredits.kz",
   logo: "https://carboncredits.kz/favicon.ico",
@@ -63,8 +63,8 @@ export const metadata: Metadata = {
     "Article 6 Kazakhstan",
     "carbon market Kazakhstan",
     "ecological restoration",
-    "карбон несиелері Қазақстан",
-    "карбоновые кредиты Казахстан",
+    "көміртегі бірліктері Қазақстан",
+    "углеродные единицы Казахстан",
   ],
   openGraph: {
     type: "website",

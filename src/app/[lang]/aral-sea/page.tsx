@@ -16,12 +16,12 @@ const META: Record<Lang, { title: string; description: string }> = {
       "The Aral Sea dried-lakebed restoration project: saxaul afforestation across 1.1M hectares, Verra VCS certified, sequestering millions of tonnes of CO₂ while reversing one of the world's worst ecological disasters.",
   },
   ru: {
-    title: "Восстановление Аральского моря — Карбоновые кредиты и саксаул | CarbonCredits.kz",
+    title: "Восстановление Аральского моря — Углеродные единицы и саксаул | CarbonCredits.kz",
     description:
       "Проект восстановления высохшего дна Аральского моря: посадка саксаула на 1,1 млн гектаров, сертификация Verra VCS, секвестрация миллионов тонн CO₂ и ликвидация последствий одной из крупнейших экологических катастроф.",
   },
   kk: {
-    title: "Арал теңізін қалпына келтіру — Карбон несиелері және сексеуіл | CarbonCredits.kz",
+    title: "Арал теңізін қалпына келтіру — Көміртегі бірліктері және сексеуіл | CarbonCredits.kz",
     description:
       "Арал теңізінің кепкен түбін қалпына келтіру жобасы: 1,1 млн гектарға сексеуіл егу, Verra VCS сертификаты, миллиондаған тонна CO₂ секвестрациясы және дүниежүзіндегі ең ауыр экологиялық апаттың зардаптарын жою.",
   },
