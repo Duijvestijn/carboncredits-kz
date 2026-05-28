@@ -1,35 +1,36 @@
 /**
  * Landscape and nature imagery for CarbonCredits.kz
- * Source: Unsplash (free to use, no attribution required for web)
- * TODO: Replace with official Kazakhstan photography / satellite imagery
+ * Source: AI-generated authentic Kazakh landscapes (Higgsfield soul_location model, 2026-05-28)
+ *         Remaining keys: Unsplash (free to use, no attribution required for web)
  */
 
 const UNS = "https://images.unsplash.com";
+const HF = "https://d8j0ntlcm91z4.cloudfront.net/user_3E7JAVPwA7DZLNJSwAYUmbE0qfD";
 
 export const IMAGES = {
-  /** Hero: vast steppe landscape at golden hour */
-  heroSteppe: `${UNS}/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2400&q=85`,
+  /** Hero: Saryarka Steppe — vast golden steppe at sunrise */
+  heroSteppe: `${HF}/hf_20260528_063131_39c28258-a576-48cd-886a-6cb33a924957.png`,
 
-  /** Aerial view: green Kazakh plains from above */
-  aerialGreen: `${UNS}/photo-1540541338-ac7e5d4e3b91?auto=format&fit=crop&w=2400&q=85`,
+  /** Aerial view: Sarysu River Plain — green Kazakh plains from above */
+  aerialGreen: `${HF}/hf_20260528_063139_5a037bf9-f9b2-40b5-b7e8-5d5dd51da8cf.png`,
 
-  /** Arid/dried landscape — Aral Sea region feel */
-  aralDry: `${UNS}/photo-1615751072497-5f5169febe17?auto=format&fit=crop&w=2400&q=85`,
+  /** Aral Sea Ship Graveyard — dried lakebed with rusted vessels */
+  aralDry: `${HF}/hf_20260528_063134_b2c4b3a9-c1e1-48a8-ab62-a1371d15cdb3.png`,
 
-  /** Saxaul / restoration — desert trees */
-  saxaulRestoration: `${UNS}/photo-1533577116850-9cc66cad8a9b?auto=format&fit=crop&w=2400&q=85`,
+  /** Saryshaghan Saxaul Trench — saxaul forest restoration */
+  saxaulRestoration: `${HF}/hf_20260528_063135_2068ddeb-5d5d-4cc7-9b95-addede6d6046.png`,
 
-  /** Tree planting — hands in soil */
-  treePlanting: `${UNS}/photo-1542601906-a0ddbcdb0ad5?auto=format&fit=crop&w=2400&q=85`,
+  /** Aksu Field Station — tree planting and ecological restoration */
+  treePlanting: `${HF}/hf_20260528_063150_5058f5db-d08b-46f1-acdd-18c0069a6498.png`,
 
-  /** Grassland restoration — lush meadow */
-  grassland: `${UNS}/photo-1474044159687-1ee9f3a51722?auto=format&fit=crop&w=2400&q=85`,
+  /** Saryarqa Dala — lush Kazakh steppe grassland */
+  grassland: `${HF}/hf_20260528_063137_014000ac-0a83-4eea-a1ce-c128da6a53f3.png`,
 
-  /** River and water restoration */
-  waterRestoration: `${UNS}/photo-1530549387789-4c87c3dce3f2?auto=format&fit=crop&w=2400&q=85`,
+  /** Korgalzhyn Wetland Reserve — water and wetland restoration */
+  waterRestoration: `${HF}/hf_20260528_063144_c42e5566-4ec5-4b52-8fc3-09ea44726b68.png`,
 
-  /** Aerial farmland — geometric parcels */
-  farmlandAerial: `${UNS}/photo-1553913861-c0fdfd2300ce?auto=format&fit=crop&w=2400&q=85`,
+  /** Kostanay Plain — aerial view of agricultural parcels */
+  farmlandAerial: `${HF}/hf_20260528_063140_430c7082-f004-4791-b1e0-e1fa33171536.png`,
 
   /** Nature lush green recovery */
   natureGreen: `${UNS}/photo-1574482620811-1aa16ffe3c90?auto=format&fit=crop&w=2400&q=85`,
@@ -40,8 +41,8 @@ export const IMAGES = {
   /** Satellite/earth from above */
   satellite: `${UNS}/photo-1519817914152-22d216bb9170?auto=format&fit=crop&w=2400&q=85`,
 
-  /** Community/rural development */
-  ruralCommunity: `${UNS}/photo-1592820407780-54c23feac8c0?auto=format&fit=crop&w=2400&q=85`,
+  /** Saryarka Steppe — community and rural landscape */
+  ruralCommunity: `${HF}/hf_20260528_063142_a216bdbe-bbbb-4fed-9725-927f813f1c2b.png`,
 
   /** Financial/investment premium feel */
   financialPremium: `${UNS}/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=2400&q=85`,
