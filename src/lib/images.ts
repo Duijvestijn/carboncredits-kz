@@ -38,8 +38,8 @@ export const IMAGES = {
   /** Dramatic sky — Kazakh sky is famous */
   dramaticSky: `${UNS}/photo-1485841119756-7db60ac52db4?auto=format&fit=crop&w=2400&q=85`,
 
-  /** Satellite/earth from above */
-  satellite: `${UNS}/photo-1519817914152-22d216bb9170?auto=format&fit=crop&w=2400&q=85`,
+  /** Aerial: Kazakh Steppe from altitude — cinematic wide landscape */
+  satellite: `${HF}/hf_20260528_081856_5421b420-5eda-412d-9476-35e8c13ee28c.png`,
 
   /** Saryarka Steppe — community and rural landscape */
   ruralCommunity: `${HF}/hf_20260528_063142_a216bdbe-bbbb-4fed-9725-927f813f1c2b.png`,

@@ -133,10 +133,10 @@ export default function HeroSection() {
             {t.btn1}
           </a>
           <a
-            href="#contact"
+            href="#projects"
             className="px-7 py-3.5 rounded-xl text-sm font-medium bg-white/[0.07] hover:bg-white/[0.12] border border-white/[0.12] text-kz-sand/80 hover:text-kz-sand backdrop-blur-sm transition-colors"
           >
-            {nav.contact}
+            {t.btn3}
           </a>
         </motion.div>
 

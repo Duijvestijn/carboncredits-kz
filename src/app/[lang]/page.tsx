@@ -11,6 +11,7 @@ import ProjectTypes from "@/components/ProjectTypes";
 import RegionalBenefits from "@/components/RegionalBenefits";
 import InvestmentSection from "@/components/InvestmentSection";
 import NewsSection from "@/components/NewsSection";
+import FlagshipProject from "@/components/FlagshipProject";
 import ContactSection from "@/components/ContactSection";
 
 const SUPPORTED_LANGS = ["en", "ru", "kk"];
@@ -37,6 +38,7 @@ export default async function LangHomePage({
         <RegionalBenefits />
         <InvestmentSection />
         <NewsSection />
+        <FlagshipProject />
         <ContactSection />
       </main>
       <Footer />

@@ -107,13 +107,13 @@ export default function HowProjectsWork() {
           ))}
         </div>
 
-        {/* Bottom CTA */}
+        {/* Bottom link — educational, not contact-driven */}
         <div className="mt-16 text-center">
           <a
-            href="#contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-kz-gold hover:bg-kz-gold-light text-kz-dark font-bold rounded-xl transition-colors"
+            href="#aral-sea"
+            className="inline-flex items-center gap-2 text-kz-gold/70 hover:text-kz-gold text-sm font-medium transition-colors"
           >
-            {lang === "kk" ? "Жобаны бастау" : lang === "ru" ? "Начать проект" : "Start a Project"}
+            {lang === "kk" ? "Нақты жобаны қараңыз" : lang === "ru" ? "Смотреть реальный проект" : "See a real project in action"}
             <span>→</span>
           </a>
         </div>
