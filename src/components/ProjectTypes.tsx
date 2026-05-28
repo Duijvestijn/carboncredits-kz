@@ -58,7 +58,7 @@ export default function ProjectTypes() {
           </motion.h2>
         </div>
 
-        {/* Project type cards â€” expandable */}
+        {/* Project type cards — expandable */}
         <div ref={gridRef} className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {types.map((type, i) => {
             const isOpen = openId === type.id;

@@ -11,17 +11,21 @@ const FADE_UP = (delay = 0) => ({
 });
 
 const TAG_COLORS: Record<string, string> = {
-  "Ð–Ð¾Ð±Ð°": "bg-kz-green/15 border-kz-green/25 text-kz-green-light",
-  "ÐÐ°Ñ€Ñ‹Ò›": "bg-kz-gold/15 border-kz-gold/25 text-kz-gold",
-  "Ð¡Ð°ÑÑÐ°Ñ‚": "bg-kz-blue/30 border-kz-mist/25 text-kz-mist",
-  "Ð—ÐµÑ€Ñ‚Ñ‚ÐµÑƒ": "bg-kz-navy border-white/10 text-kz-sand/60",
-  "Ð˜Ð½Ð²ÐµÑÑ‚Ð¸Ñ†Ð¸Ñ": "bg-kz-gold/15 border-kz-gold/25 text-kz-gold",
+  // Kazakh
+  "Жоба": "bg-kz-green/15 border-kz-green/25 text-kz-green-light",
+  "Нарық": "bg-kz-gold/15 border-kz-gold/25 text-kz-gold",
+  "Саясат": "bg-kz-blue/30 border-kz-mist/25 text-kz-mist",
+  "Зерттеу": "bg-kz-navy border-white/10 text-kz-sand/60",
+  "Инвестиция": "bg-kz-gold/15 border-kz-gold/25 text-kz-gold",
+  // Shared
   "Verra": "bg-kz-green/15 border-kz-green/25 text-kz-green-light",
-  "ÐŸÑ€Ð¾ÐµÐºÑ‚": "bg-kz-green/15 border-kz-green/25 text-kz-green-light",
-  "Ð Ñ‹Ð½Ð¾Ðº": "bg-kz-gold/15 border-kz-gold/25 text-kz-gold",
-  "ÐŸÐ¾Ð»Ð¸Ñ‚Ð¸ÐºÐ°": "bg-kz-blue/30 border-kz-mist/25 text-kz-mist",
-  "Ð˜ÑÑÐ»ÐµÐ´Ð¾Ð²Ð°Ð½Ð¸Ðµ": "bg-kz-navy border-white/10 text-kz-sand/60",
-  "Ð˜Ð½Ð²ÐµÑÑ‚Ð¸Ñ†Ð¸Ð¸": "bg-kz-gold/15 border-kz-gold/25 text-kz-gold",
+  // Russian
+  "Проект": "bg-kz-green/15 border-kz-green/25 text-kz-green-light",
+  "Рынок": "bg-kz-gold/15 border-kz-gold/25 text-kz-gold",
+  "Политика": "bg-kz-blue/30 border-kz-mist/25 text-kz-mist",
+  "Исследование": "bg-kz-navy border-white/10 text-kz-sand/60",
+  "Инвестиции": "bg-kz-gold/15 border-kz-gold/25 text-kz-gold",
+  // English
   "Project": "bg-kz-green/15 border-kz-green/25 text-kz-green-light",
   "Market": "bg-kz-gold/15 border-kz-gold/25 text-kz-gold",
   "Policy": "bg-kz-blue/30 border-kz-mist/25 text-kz-mist",

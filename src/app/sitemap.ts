@@ -1,15 +1,45 @@
 import type { MetadataRoute } from "next";
 
+const BASE = "https://carboncredits.kz";
+const LANGS = ["en", "ru", "kk"] as const;
+
+/** Use a fixed date reflecting latest meaningful content update */
+const LAST_MODIFIED = new Date("2026-05-28");
+
+interface SitemapSection {
+  path: string;
+  priority: number;
+  changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
+}
+
+const SECTIONS: SitemapSection[] = [
+  { path: "",            priority: 1.0,  changeFrequency: "weekly"  },
+  { path: "/aral-sea",  priority: 0.9,  changeFrequency: "monthly" },
+  { path: "/article-6", priority: 0.85, changeFrequency: "monthly" },
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://carboncredits.kz";
-  return [
-    { url: base, lastModified: new Date(), changeFrequency: "weekly", priority: 1.0 },
-    { url: `${base}/#carbon-credits`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${base}/#why-kazakhstan`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${base}/#aral-sea`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: `${base}/#article-6`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${base}/#projects`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${base}/#investment`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${base}/#contact`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+  const entries: MetadataRoute.Sitemap = [
+    // Root redirect — lower priority, crawlers follow to /en
+    {
+      url: BASE,
+      lastModified: LAST_MODIFIED,
+      changeFrequency: "weekly",
+      priority: 0.5,
+    },
   ];
+
+  for (const lang of LANGS) {
+    for (const section of SECTIONS) {
+      entries.push({
+        url: `${BASE}/${lang}${section.path}`,
+        lastModified: LAST_MODIFIED,
+        changeFrequency: section.changeFrequency,
+        // English pages get full priority; other languages slightly lower
+        priority: lang === "en" ? section.priority : section.priority * 0.9,
+      });
+    }
+  }
+
+  return entries;
 }

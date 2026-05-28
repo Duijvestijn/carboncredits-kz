@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { useLang, type Lang } from "@/lib/LangContext";
 import { translations } from "@/lib/translations";
 
@@ -67,11 +68,29 @@ const LANGS: { code: Lang; label: string }[] = [
   { code: "en", label: "ENG" },
 ];
 
+const SUPPORTED_LANGS: Lang[] = ["en", "ru", "kk"];
+
 export default function Header() {
   const { lang, setLang } = useLang();
   const t = translations.nav[lang];
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
+
+  /** Switch language: update context AND navigate to the equivalent URL */
+  const switchLang = (code: Lang) => {
+    setLang(code);
+    // Replace the lang segment in the current path
+    // e.g. /en/aral-sea → /ru/aral-sea
+    const segments = pathname.split("/").filter(Boolean);
+    if (segments.length > 0 && SUPPORTED_LANGS.includes(segments[0] as Lang)) {
+      segments[0] = code;
+    } else {
+      segments.unshift(code);
+    }
+    router.push("/" + segments.join("/"));
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -133,7 +152,7 @@ export default function Header() {
             {LANGS.map((l) => (
               <button
                 key={l.code}
-                onClick={() => setLang(l.code)}
+                onClick={() => switchLang(l.code)}
                 className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold tracking-widest transition-all duration-200 ${
                   lang === l.code
                     ? "bg-kz-gold text-kz-dark shadow-sm"

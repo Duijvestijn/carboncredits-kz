@@ -10,12 +10,18 @@ interface LangContextValue {
 }
 
 const LangContext = createContext<LangContextValue>({
-  lang: "kk",
+  lang: "en",
   setLang: () => {},
 });
 
-export function LangProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Lang>("kk");
+export function LangProvider({
+  children,
+  initialLang = "en",
+}: {
+  children: ReactNode;
+  initialLang?: Lang;
+}) {
+  const [lang, setLang] = useState<Lang>(initialLang);
   return (
     <LangContext.Provider value={{ lang, setLang }}>
       {children}

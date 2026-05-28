@@ -83,7 +83,7 @@ export default function Footer() {
         <div className="border-t border-white/[0.06] pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <p className="text-kz-sand/30 text-xs">{t.copyright}</p>
           <div className="flex items-center gap-4">
-            <span className="text-kz-sand/20 text-xs">🌱 Powered by nature</span>
+            <span className="text-kz-sand/20 text-xs">Powered by nature</span>
           </div>
         </div>
       </div>
