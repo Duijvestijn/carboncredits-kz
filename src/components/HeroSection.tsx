@@ -19,6 +19,7 @@ const FADE_UP = {
 export default function HeroSection() {
   const { lang } = useLang();
   const t = translations.hero[lang];
+  const nav = translations.nav[lang];
   const containerRef = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -117,32 +118,26 @@ export default function HeroSection() {
           {t.description}
         </motion.p>
 
-        {/* CTA buttons */}
+        {/* CTA buttons — two clear actions */}
         <motion.div
           custom={4}
           variants={FADE_UP}
           initial="hidden"
           animate="visible"
-          className="flex flex-wrap justify-center gap-3 mb-16"
+          className="flex flex-wrap justify-center gap-4 mb-16"
         >
-          {[
-            { label: t.btn1, href: "#carbon-credits", primary: true },
-            { label: t.btn2, href: "#why-kazakhstan", primary: false },
-            { label: t.btn3, href: "#projects", primary: false },
-            { label: t.btn4, href: "#article-6", primary: false },
-          ].map(({ label, href, primary }) => (
-            <a
-              key={href}
-              href={href}
-              className={`px-5 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${
-                primary
-                  ? "bg-kz-gold hover:bg-kz-gold-light text-kz-dark font-semibold shadow-lg shadow-kz-gold/20"
-                  : "bg-white/[0.07] hover:bg-white/[0.12] border border-white/[0.12] text-kz-sand/80 hover:text-kz-sand backdrop-blur-sm"
-              }`}
-            >
-              {label}
-            </a>
-          ))}
+          <a
+            href="#carbon-credits"
+            className="px-7 py-3.5 rounded-xl text-sm font-semibold bg-kz-gold hover:bg-kz-gold-light text-kz-dark transition-colors shadow-lg shadow-kz-gold/20"
+          >
+            {t.btn1}
+          </a>
+          <a
+            href="#contact"
+            className="px-7 py-3.5 rounded-xl text-sm font-medium bg-white/[0.07] hover:bg-white/[0.12] border border-white/[0.12] text-kz-sand/80 hover:text-kz-sand backdrop-blur-sm transition-colors"
+          >
+            {nav.contact}
+          </a>
         </motion.div>
 
         {/* Stats bar */}

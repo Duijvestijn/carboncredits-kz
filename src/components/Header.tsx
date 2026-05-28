@@ -117,19 +117,13 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between gap-6">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 flex-shrink-0 group">
-          <div className="w-8 h-8 rounded-full bg-kz-gold/20 border border-kz-gold/40 flex items-center justify-center">
-            <span className="text-kz-gold text-xs font-bold font-serif">C</span>
-          </div>
-          <div className="hidden sm:block">
-            <div className="text-kz-cream font-semibold text-sm leading-none tracking-wide">
-              CarbonCredits
-            </div>
-            <div className="text-kz-gold text-[10px] tracking-[0.2em] uppercase leading-none mt-0.5">
-              .kz
-            </div>
-          </div>
+        {/* Logo — wordmark only */}
+        <Link href="/en" className="flex-shrink-0 group">
+          <span className="font-serif font-bold text-[17px] leading-none tracking-tight">
+            <span className="text-white group-hover:text-kz-cream transition-colors">Carbon</span>
+            <span className="text-kz-gold">Credits</span>
+            <span className="text-kz-gold/50 text-sm">.kz</span>
+          </span>
         </Link>
 
         {/* Desktop Nav */}

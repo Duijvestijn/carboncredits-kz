@@ -15,15 +15,14 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-9 h-9 rounded-full bg-kz-gold/20 border border-kz-gold/40 flex items-center justify-center">
-                <span className="text-kz-gold font-bold font-serif">C</span>
+            <div className="mb-4">
+              <div className="font-serif font-bold text-xl leading-none tracking-tight mb-1">
+                <span className="text-white">Carbon</span>
+                <span className="text-kz-gold">Credits</span>
+                <span className="text-kz-gold/50 text-base">.kz</span>
               </div>
-              <div>
-                <div className="text-kz-cream font-semibold leading-none">CarbonCredits.kz</div>
-                <div className="text-kz-gold/60 text-xs tracking-widest mt-0.5">
-                  {t.tagline}
-                </div>
+              <div className="text-kz-gold/60 text-xs tracking-widest mt-1.5">
+                {t.tagline}
               </div>
             </div>
             <p className="text-kz-sand/40 text-xs leading-relaxed max-w-sm">

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Dark navy background with rounded corners -->
+  <rect width="32" height="32" rx="7" fill="#0B1623"/>
+  <!-- Thin gold accent bar at top -->
+  <rect x="0" y="0" width="32" height="2.5" rx="1.5" fill="#C4A135" opacity="0.7"/>
+  <!-- Stylised leaf / arc mark -->
+  <path
+    d="M10 22 C10 14 16 10 24 10 C24 18 18 24 10 22 Z"
+    fill="none"
+    stroke="#C4A135"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    opacity="0.85"
+  />
+  <!-- Stem -->
+  <line x1="10" y1="22" x2="14" y2="18" stroke="#C4A135" stroke-width="1.5" stroke-linecap="round" opacity="0.85"/>
+</svg>
