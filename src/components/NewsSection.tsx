@@ -10,6 +10,30 @@ const FADE_UP = (delay = 0) => ({
   visible: { opacity: 1, y: 0, transition: { delay, duration: 0.65, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] } },
 });
 
+/** Maps each tag to the most relevant on-page section */
+const TAG_HREF: Record<string, string> = {
+  // Kazakh
+  "Жоба":       "#aral-sea",
+  "Нарық":      "#carbon-credits",
+  "Саясат":     "#article-6",
+  "Зерттеу":    "#why-kazakhstan",
+  "Инвестиция": "#investment",
+  // Russian
+  "Проект":     "#aral-sea",
+  "Рынок":      "#carbon-credits",
+  "Политика":   "#article-6",
+  "Исследование": "#why-kazakhstan",
+  "Инвестиции": "#investment",
+  // English
+  "Project":    "#aral-sea",
+  "Market":     "#carbon-credits",
+  "Policy":     "#article-6",
+  "Research":   "#why-kazakhstan",
+  "Investment": "#investment",
+  // Shared
+  "Verra":      "#aral-sea",
+};
+
 const TAG_COLORS: Record<string, string> = {
   // Kazakh
   "Жоба": "bg-kz-green/15 border-kz-green/25 text-kz-green-light",
@@ -70,6 +94,7 @@ export default function NewsSection() {
         <div ref={gridRef} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {t.items.map((item, i) => {
             const tagClass = TAG_COLORS[item.tag] || "bg-kz-navy border-white/10 text-kz-sand/60";
+            const href = TAG_HREF[item.tag] || "#carbon-credits";
             const isFeatured = i === 0;
             return (
               <motion.article
@@ -77,11 +102,11 @@ export default function NewsSection() {
                 variants={FADE_UP(i * 0.08)}
                 initial="hidden"
                 animate={isGridInView ? "visible" : "hidden"}
-                className={`group rounded-3xl bg-kz-dark border border-white/[0.05] hover:border-kz-gold/20 transition-all cursor-default overflow-hidden ${
+                className={`group rounded-3xl bg-kz-dark border border-white/[0.05] hover:border-kz-gold/20 transition-all overflow-hidden ${
                   isFeatured ? "sm:col-span-2 lg:col-span-1" : ""
                 }`}
               >
-                <div className="p-6">
+                <a href={href} className="block p-6">
                   <div className="flex items-center justify-between mb-4">
                     <span className={`px-3 py-1 rounded-full border text-[10px] font-bold tracking-wide uppercase ${tagClass}`}>
                       {item.tag}
@@ -95,7 +120,7 @@ export default function NewsSection() {
                   <span className="text-kz-gold/60 text-xs font-medium group-hover:text-kz-gold transition-colors">
                     {t.readMore} →
                   </span>
-                </div>
+                </a>
               </motion.article>
             );
           })}

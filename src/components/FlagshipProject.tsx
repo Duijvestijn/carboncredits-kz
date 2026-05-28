@@ -24,8 +24,8 @@ const content = {
       "Бұл — Орталық Азиядағы және мүмкін бүкіл әлемдегі ең ірі белсенді шөл афоресттеу жобасы. Бұрынғы Арал теңізінің сусыз табанында саксаул ағаштарын өсіру арқылы Green Earth Group 100 000+ гектар жерді қалпына келтіреді, CO₂ секвестрациялайды және жергілікті экожүйені тіршілікке қайтарады.",
     credentialTitle: "Жобаның негізгі деректері",
     credentials: [
-      { label: "Тіркеу органы", value: "Verra VCS Standard" },
-      { label: "Стандарт", value: "VM0026 — Экожүйелерді қалпына келтіру" },
+      { label: "Тіркеу органы", value: "Verra Verified Carbon Standard (VCS)" },
+      { label: "Стандарт", value: "VM0047 — Афоресттеу, орман қалпына келтіру және реөсімдеу" },
       { label: "Орналасқан жері", value: "Арал теңізінің бұрынғы табаны, Оңтүстік Қазақстан" },
       { label: "Ауқымы", value: "100 000+ гектар" },
       { label: "Егілген ағаштар", value: "1 100 000+ саксаул ағаштары" },
@@ -53,8 +53,8 @@ const content = {
       "Это крупнейший активный проект по озеленению пустыни в Центральной Азии, а возможно, и во всём мире. Высаживая саксаул на высохшем дне бывшего Аральского моря, Green Earth Group восстанавливает более 100 000 гектаров, секвестрирует CO₂ и возвращает жизнь в деградированные экосистемы.",
     credentialTitle: "Ключевые данные проекта",
     credentials: [
-      { label: "Регистратор", value: "Verra VCS Standard" },
-      { label: "Стандарт", value: "VM0026 — Сохранение и восстановление экосистем" },
+      { label: "Регистратор", value: "Verra Verified Carbon Standard (VCS)" },
+      { label: "Стандарт", value: "VM0047 — Облесение, лесовосстановление и ревегетация" },
       { label: "Расположение", value: "Бывшее дно Аральского моря, Южный Казахстан" },
       { label: "Масштаб", value: "100 000+ гектаров" },
       { label: "Высажено деревьев", value: "1 100 000+ саксаулов" },
@@ -82,8 +82,8 @@ const content = {
       "This is among the largest active desert afforestation projects in Central Asia. By planting saxaul trees on the dried seabed of the former Aral Sea, Green Earth Group is restoring over 100,000 hectares of degraded land, sequestering CO₂, and generating internationally verified carbon credits under the Verra VCS Standard.",
     credentialTitle: "Project Credentials",
     credentials: [
-      { label: "Registry", value: "Verra VCS Standard" },
-      { label: "Methodology", value: "VM0026 — Conservation & Restoration" },
+      { label: "Registry", value: "Verra Verified Carbon Standard (VCS)" },
+      { label: "Methodology", value: "VM0047 — Afforestation, Reforestation & Revegetation" },
       { label: "Location", value: "Former Aral Sea bed, South Kazakhstan" },
       { label: "Project Area", value: "100,000+ hectares" },
       { label: "Trees Planted", value: "1,100,000+ saxaul trees" },
