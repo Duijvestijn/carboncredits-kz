@@ -156,8 +156,6 @@ export default function WhatAreCredits() {
                 <div className="w-2.5 h-2.5 rounded-full bg-kz-gold/70" />
                 <div className="w-2.5 h-2.5 rounded-full bg-kz-sky/70" />
               </div>
-                ))}
-              </div>
               <div className="w-px h-6 bg-kz-gold/20" />
               <span className="text-kz-gold text-sm font-medium">Nature × Finance</span>
             </div>
