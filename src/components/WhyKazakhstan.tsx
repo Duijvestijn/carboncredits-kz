@@ -178,7 +178,7 @@ export default function WhyKazakhstan() {
           {/* Advantages grid */}
           <div ref={advantagesRef}>
             <h3 className="font-serif text-2xl text-white font-bold mb-6">
-              {lang === "kk" ? "Бірегей артықшылықтар" : lang === "ru" ? "Уникальные преимущества" : "Unique Advantages"}
+              {t.advantagesTitle}
             </h3>
             <div className="space-y-4">
               {advantages.map((adv, i) => (

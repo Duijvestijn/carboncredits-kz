@@ -10,51 +10,23 @@ const FADE_UP = (delay = 0) => ({
   visible: { opacity: 1, y: 0, transition: { delay, duration: 0.65, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] } },
 });
 
-/** Maps each tag to the most relevant on-page section */
+/** Maps stable tagId to the most relevant on-page section */
 const TAG_HREF: Record<string, string> = {
-  // Kazakh
-  "Жоба":       "#aral-sea",
-  "Нарық":      "#carbon-credits",
-  "Саясат":     "#article-6",
-  "Зерттеу":    "#why-kazakhstan",
-  "Инвестиция": "#investment",
-  // Russian
-  "Проект":     "#aral-sea",
-  "Рынок":      "#carbon-credits",
-  "Политика":   "#article-6",
-  "Исследование": "#why-kazakhstan",
-  "Инвестиции": "#investment",
-  // English
-  "Project":    "#aral-sea",
-  "Market":     "#carbon-credits",
-  "Policy":     "#article-6",
-  "Research":   "#why-kazakhstan",
-  "Investment": "#investment",
-  // Shared
-  "Verra":      "#aral-sea",
+  project:    "#aral-sea",
+  market:     "#carbon-credits",
+  policy:     "#article-6",
+  research:   "#why-kazakhstan",
+  investment: "#investment",
+  verra:      "#aral-sea",
 };
 
 const TAG_COLORS: Record<string, string> = {
-  // Kazakh
-  "Жоба": "bg-kz-green/15 border-kz-green/25 text-kz-green-light",
-  "Нарық": "bg-kz-gold/15 border-kz-gold/25 text-kz-gold",
-  "Саясат": "bg-kz-blue/30 border-kz-mist/25 text-kz-mist",
-  "Зерттеу": "bg-kz-navy border-white/10 text-kz-sand/60",
-  "Инвестиция": "bg-kz-gold/15 border-kz-gold/25 text-kz-gold",
-  // Shared
-  "Verra": "bg-kz-green/15 border-kz-green/25 text-kz-green-light",
-  // Russian
-  "Проект": "bg-kz-green/15 border-kz-green/25 text-kz-green-light",
-  "Рынок": "bg-kz-gold/15 border-kz-gold/25 text-kz-gold",
-  "Политика": "bg-kz-blue/30 border-kz-mist/25 text-kz-mist",
-  "Исследование": "bg-kz-navy border-white/10 text-kz-sand/60",
-  "Инвестиции": "bg-kz-gold/15 border-kz-gold/25 text-kz-gold",
-  // English
-  "Project": "bg-kz-green/15 border-kz-green/25 text-kz-green-light",
-  "Market": "bg-kz-gold/15 border-kz-gold/25 text-kz-gold",
-  "Policy": "bg-kz-blue/30 border-kz-mist/25 text-kz-mist",
-  "Research": "bg-kz-navy border-white/10 text-kz-sand/60",
-  "Investment": "bg-kz-gold/15 border-kz-gold/25 text-kz-gold",
+  project:    "bg-kz-green/15 border-kz-green/25 text-kz-green-light",
+  market:     "bg-kz-gold/15 border-kz-gold/25 text-kz-gold",
+  policy:     "bg-kz-blue/30 border-kz-mist/25 text-kz-mist",
+  research:   "bg-kz-navy border-white/10 text-kz-sand/60",
+  investment: "bg-kz-gold/15 border-kz-gold/25 text-kz-gold",
+  verra:      "bg-kz-green/15 border-kz-green/25 text-kz-green-light",
 };
 
 export default function NewsSection() {
@@ -93,8 +65,8 @@ export default function NewsSection() {
         {/* News grid */}
         <div ref={gridRef} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {t.items.map((item, i) => {
-            const tagClass = TAG_COLORS[item.tag] || "bg-kz-navy border-white/10 text-kz-sand/60";
-            const href = TAG_HREF[item.tag] || "#carbon-credits";
+            const tagClass = TAG_COLORS[item.tagId] || "bg-kz-navy border-white/10 text-kz-sand/60";
+            const href = TAG_HREF[item.tagId] || "#carbon-credits";
             const isFeatured = i === 0;
             return (
               <motion.article

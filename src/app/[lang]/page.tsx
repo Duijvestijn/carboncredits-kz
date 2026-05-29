@@ -27,7 +27,7 @@ export default async function LangHomePage({
   return (
     <>
       <Header />
-      <main>
+      <main id="main">
         <HeroSection />
         <WhatAreCredits />
         <WhyKazakhstan />

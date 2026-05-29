@@ -12,7 +12,7 @@ function LangFlag({ code }: { code: Lang }) {
   if (code === "kk") {
     // Kazakhstan: sky-blue field, yellow ornamental stripe on left, yellow sun
     return (
-      <svg viewBox="0 0 20 14" width="18" height="13" className="rounded-[2px] flex-shrink-0">
+      <svg viewBox="0 0 20 14" width="18" height="13" className="rounded-[2px] flex-shrink-0" aria-hidden="true">
         <rect width="20" height="14" fill="#00AFCA" />
         <rect width="1.4" height="14" fill="#FFD700" />
         {/* sun disc */}
@@ -35,7 +35,7 @@ function LangFlag({ code }: { code: Lang }) {
   if (code === "ru") {
     // Russia: white / blue / red horizontal thirds
     return (
-      <svg viewBox="0 0 20 14" width="18" height="13" className="rounded-[2px] flex-shrink-0">
+      <svg viewBox="0 0 20 14" width="18" height="13" className="rounded-[2px] flex-shrink-0" aria-hidden="true">
         <rect width="20" height="14" fill="#D52B1E" />
         <rect width="20" height="9.33" fill="#003DA5" />
         <rect width="20" height="4.67" fill="#FFFFFF" />
@@ -44,7 +44,7 @@ function LangFlag({ code }: { code: Lang }) {
   }
   // English — UK Union Jack (simplified)
   return (
-    <svg viewBox="0 0 20 14" width="18" height="13" className="rounded-[2px] flex-shrink-0">
+    <svg viewBox="0 0 20 14" width="18" height="13" className="rounded-[2px] flex-shrink-0" aria-hidden="true">
       <rect width="20" height="14" fill="#012169" />
       {/* white X */}
       <line x1="0" y1="0" x2="20" y2="14" stroke="white" strokeWidth="3.2" />
@@ -116,6 +116,14 @@ export default function Header() {
           : "bg-transparent py-5"
       }`}
     >
+      {/* Skip navigation — visible only on keyboard focus */}
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-6 focus:z-50 focus:px-4 focus:py-2 focus:bg-kz-gold focus:text-kz-dark focus:rounded-lg focus:text-sm focus:font-bold focus:outline-none"
+      >
+        Skip to content
+      </a>
+
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between gap-6">
         {/* Logo — wordmark only */}
         <Link href="/en" className="flex-shrink-0 group">

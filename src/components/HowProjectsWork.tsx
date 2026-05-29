@@ -113,7 +113,7 @@ export default function HowProjectsWork() {
             href="#aral-sea"
             className="inline-flex items-center gap-2 text-kz-gold/70 hover:text-kz-gold text-sm font-medium transition-colors"
           >
-            {lang === "kk" ? "Нақты жобаны қараңыз" : lang === "ru" ? "Смотреть реальный проект" : "See a real project in action"}
+            {t.link}
             <span>→</span>
           </a>
         </div>

@@ -51,6 +51,14 @@ export async function generateMetadata({
     openGraph: {
       title: m.title,
       description: m.description,
+      images: [
+        {
+          url: "https://d8j0ntlcm91z4.cloudfront.net/user_3E7JAVPwA7DZLNJSwAYUmbE0qfD/hf_20260528_063139_5a037bf9-f9b2-40b5-b7e8-5d5dd51da8cf_min.webp",
+          width: 2048,
+          height: 1152,
+          alt: "Kazakhstan landscape — Article 6 carbon market",
+        },
+      ],
     },
   };
 }
@@ -66,7 +74,7 @@ export default async function Article6Page({
   return (
     <>
       <Header />
-      <main>
+      <main id="main">
         <div className="pt-20">
           <Article6Section />
         </div>

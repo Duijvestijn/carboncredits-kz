@@ -16,7 +16,6 @@ export default function AnimatedCounter({ value, duration = 2000 }: AnimatedCoun
   useEffect(() => {
     if (!isInView) return;
 
-    // Extract numeric part and suffix/prefix
     const match = value.match(/^([^0-9]*)([0-9,.]+)([^0-9]*)$/);
     if (!match) {
       setDisplayed(value);
@@ -34,6 +33,8 @@ export default function AnimatedCounter({ value, duration = 2000 }: AnimatedCoun
     }
 
     const startTime = performance.now();
+    let frameId: number;
+
     const animate = (now: number) => {
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
@@ -50,9 +51,13 @@ export default function AnimatedCounter({ value, duration = 2000 }: AnimatedCoun
       }
       setDisplayed(`${prefix}${formatted}${suffix}`);
 
-      if (progress < 1) requestAnimationFrame(animate);
+      if (progress < 1) {
+        frameId = requestAnimationFrame(animate);
+      }
     };
-    requestAnimationFrame(animate);
+
+    frameId = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(frameId);
   }, [isInView, value, duration]);
 
   return <span ref={ref}>{displayed}</span>;

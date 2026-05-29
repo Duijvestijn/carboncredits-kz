@@ -29,6 +29,15 @@ export default function ContactSection() {
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<Status>("idle");
 
+  function resetForm() {
+    setName("");
+    setEmail("");
+    setOrg("");
+    setType("");
+    setMessage("");
+    setStatus("idle");
+  }
+
   const headerRef = useRef<HTMLDivElement>(null);
   const isHeaderInView = useInView(headerRef, { once: true, margin: "-60px" });
 
@@ -157,6 +166,12 @@ export default function ContactSection() {
                 </div>
                 <h3 className="font-serif text-2xl text-kz-sand">{f.successTitle}</h3>
                 <p className="text-kz-sand/50 leading-relaxed max-w-sm">{f.successDesc}</p>
+                <button
+                  onClick={resetForm}
+                  className="mt-2 px-5 py-2.5 border border-kz-gold/30 hover:border-kz-gold/60 text-kz-gold/70 hover:text-kz-gold text-xs font-medium rounded-full transition-colors tracking-wide"
+                >
+                  {lang === "kk" ? "Тағы бір хабарлама жіберу" : lang === "ru" ? "Отправить ещё одно сообщение" : "Send another message"}
+                </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5" noValidate>

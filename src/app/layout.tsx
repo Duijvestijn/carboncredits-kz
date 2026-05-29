@@ -76,6 +76,20 @@ export const metadata: Metadata = {
       "CarbonCredits.kz — Nature Restoration & Environmental Finance",
     description:
       "Kazakhstan holds one of the world's largest untapped opportunities in nature restoration and environmental finance.",
+    images: [
+      {
+        url: "https://d8j0ntlcm91z4.cloudfront.net/user_3E7JAVPwA7DZLNJSwAYUmbE0qfD/hf_20260528_063131_39c28258-a576-48cd-886a-6cb33a924957_min.webp",
+        width: 2048,
+        height: 1152,
+        alt: "Kazakhstan steppe landscape — CarbonCredits.kz",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CarbonCredits.kz — Nature Restoration & Environmental Finance",
+    description: "Kazakhstan holds one of the world's largest untapped opportunities in nature restoration and environmental finance.",
+    images: ["https://d8j0ntlcm91z4.cloudfront.net/user_3E7JAVPwA7DZLNJSwAYUmbE0qfD/hf_20260528_063131_39c28258-a576-48cd-886a-6cb33a924957_min.webp"],
   },
   robots: { index: true, follow: true },
   metadataBase: new URL("https://carboncredits.kz"),

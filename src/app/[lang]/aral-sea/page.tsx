@@ -51,6 +51,14 @@ export async function generateMetadata({
     openGraph: {
       title: m.title,
       description: m.description,
+      images: [
+        {
+          url: "https://d8j0ntlcm91z4.cloudfront.net/user_3E7JAVPwA7DZLNJSwAYUmbE0qfD/hf_20260528_063134_b2c4b3a9-c1e1-48a8-ab62-a1371d15cdb3_min.webp",
+          width: 2048,
+          height: 1152,
+          alt: "Aral Sea dried lakebed — restoration project",
+        },
+      ],
     },
   };
 }
@@ -66,7 +74,7 @@ export default async function AralSeaPage({
   return (
     <>
       <Header />
-      <main>
+      <main id="main">
         {/* Dedicated Aral Sea page — full section + contact */}
         <div className="pt-20">
           <AralSeaSection />
