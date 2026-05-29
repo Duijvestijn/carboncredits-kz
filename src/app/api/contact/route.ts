@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
         },
         body: JSON.stringify({
           from: "CarbonCredits.kz <noreply@carboncredits.kz>",
-          to: ["info@carboncredits.kz"],
+          to: ["mail@green.earth"],
           subject: `Contact Form — ${esc(type || "General")} — ${esc(name || email)}`,
           html: `
             <h2>New Contact Form Submission</h2>
