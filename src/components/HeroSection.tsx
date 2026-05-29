@@ -26,8 +26,8 @@ export default function HeroSection() {
     target: containerRef,
     offset: ["start start", "end start"],
   });
-  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
+  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "8%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
   const stats = [
@@ -45,7 +45,7 @@ export default function HeroSection() {
     >
       {/* Background image with parallax */}
       <motion.div
-        style={{ y: bgY }}
+        style={{ y: bgY, willChange: "transform" }}
         className="absolute inset-0 scale-110"
       >
         <div
@@ -69,7 +69,7 @@ export default function HeroSection() {
 
       {/* Content */}
       <motion.div
-        style={{ y: textY, opacity }}
+        style={{ y: textY, opacity, willChange: "transform, opacity" }}
         className="relative z-10 text-center px-6 max-w-6xl mx-auto pt-24"
       >
         {/* Label */}

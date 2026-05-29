@@ -20,7 +20,8 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior managed by Lenis — native smooth scroll conflicts with it */
+  scroll-behavior: auto;
 }
 
 body {
@@ -30,6 +31,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  overscroll-behavior: none;
+}
+
+/* Promote sections to their own stacking context to reduce paint area */
+section {
+  contain: layout style;
+  transform: translateZ(0);
 }
 
 ::selection {
