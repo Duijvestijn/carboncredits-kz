@@ -22,6 +22,8 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Message too short" }, { status: 400 });
     }
 
+    // API key is sourced from Secrets Manager via amplify.yml preBuild → .env.production.local
+    // For local dev it comes from .env.local
     const apiKey = process.env.RESEND_API_KEY;
     if (apiKey) {
       const resendRes = await fetch("https://api.resend.com/emails", {

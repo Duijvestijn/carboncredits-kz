@@ -1,0 +1,18 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - RESEND_API_KEY=$(aws secretsmanager get-secret-value --secret-id carboncredits-kz/resend --region us-east-1 --query SecretString --output text)
+        - echo "RESEND_API_KEY=$RESEND_API_KEY" >> .env.production.local
+        - npm ci
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: .next
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
